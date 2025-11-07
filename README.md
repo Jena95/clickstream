@@ -13,6 +13,7 @@ copy the python code which generates data , chane the project ID.
 
 > Test messages: run the python generator code ```bash python generator.py ``` 
 
+> Check messages: bash```gcloud pubsub subscriptions pull clickstream-sub --auto-ack --limit=10```
 
 
 
