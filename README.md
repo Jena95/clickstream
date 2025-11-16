@@ -15,5 +15,10 @@ copy the python code which generates data , chane the project ID.
 
 > Check messages: bash```gcloud pubsub subscriptions pull clickstream-sub --auto-ack --limit=10```
 
+> RUN the dataflow JOB to insert into bigquery:
+ ```
+ $ python streaming.py --runner=DataflowRunner --project=project-id --region=us-central1 --temp_location=gs://project-id-clickstream/temp --staging_location=gs://project-id-421203-clickstream/staging
+ ```
+> Make sure dataflow service account (or default compute SA) is having access to read from pubsub and write to bigquery.
 
 
